@@ -1,10 +1,21 @@
+// app.component.ts
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'templatedrivenform';
+  name: string = 'John Doe';
+  email: string = 'john.doe@example.com';
+
+  onSubmit(form: NgForm) {
+    // Form submission logic
+    console.log(form.value);
+  
+
+  }
+
 }
